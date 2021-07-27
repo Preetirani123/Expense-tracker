@@ -1,13 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { GlobalContent } from '../Helper/Global';
+import { List } from './List';
 
 export const ExpenseList = () => {
+  const {itemlist} = useContext(GlobalContent);
+
   return (
     <>
       <h3>List</h3>
-      <ul >
-        <li className="list-item">
-          Shopping <span>Category</span><span>-$300</span><button className="delete-button"> X</button>
-        </li>
+      <ul className="list" >
+        {itemlist.map(item => (<List key={item.id} item={item}/>))}
       </ul>
     </>
   )
