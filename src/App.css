@@ -1,0 +1,15 @@
+h1{
+  text-align: center;
+}
+.container{
+  background-color: #ffffff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.main-container{
+  width: 500px;
+  margin : auto;
+}
